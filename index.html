@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Project Countdown Timer</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="description" content=""/>
+    <meta name="refresh" content="600"/>
+    <meta name="keywords" content=""/>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Timmana"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM Sans"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Russo One"/>
+
+</head>
+
+<body>
+<main>
+    <div class="title"><h1>Project Countdown</h1></div>
+    
+    <div class="userInput">
+        <div>
+        <label for="projectName" id="projectName">Project Name</label>
+        <input type="text">
+        </div>
+        <div>
+        <label for="projectDescription" id="projectDescription">Description</label>
+        <input type="text">
+        </div>
+        <div>
+        <label for="dateTime">Date &#38; Time</label>
+        <input type="datetime-local" name="" id="day" required>
+        <span class="validity"></span>
+        </div>
+    </div>
+    
+    <div class="startBtn">
+        <button id= "start" onclick="targetDate()">Start</button>
+    </div>
+    
+    <div class="deadline"></div>
+    <section class="container">
+        <p class="timeDurationD time"></p>
+        <p class="timeDurationH time"></p>
+        <p class="timeDurationM time"></p>
+        <p class="timeDurationS time"></p>
+
+        <p class="timeMeasureD units"></p>
+        <p class="timeMeasureH units"></p>
+        <p class="timeMeasureM units"></p>
+        <p class="timeMeasureS units"></p>
+    </section>
+    
+    <div class="stopBtn">
+        <button id="stop" onclick="stopTime()">Stop</button>
+    </div>
+</main>  
+
+<script src="index.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,196 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*CSS Grid*/
+.container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    background-color: #003B46;
+}
+
+.title {
+    text-align: center;
+    color:  #ffa502;
+    font-family: 'Russo One', serif;
+    background-color: #003B46;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    font-style: italic;
+    font-size: 3em;
+    box-shadow: 20px 10px 70px 10px  #C4DFE6 inset;
+    /*creates text outline effect*/
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+   
+}
+
+.userInput, div {
+    padding: 0.5em;
+    
+}
+
+.userInput {
+    text-align: center;
+    padding: 2em;
+    font-family: 'DM Sans', serif;
+    font-size: 1.5em;
+    background-color:#07575B;
+    font-weight: bold;
+}
+
+/*styles the input boxes*/
+input {
+    width: 40%;
+    font-family:  'DM Sans', serif;
+    font-size: 1em;
+    border: 2px solid #66A5AD;
+    border-radius: 10px;
+    background-color: #66A5AD;
+    color: #003B46;
+
+}
+
+label {
+    color: whitesmoke;
+}
+
+
+.deadline {
+    color: red;
+    font-family:'Timmana', serif;
+    font-size: 7.5em;
+    text-align: center;
+    background-color: black;
+    padding-top: 1em;
+    letter-spacing: 0.4em;
+    animation: flashing 1.2s infinite;
+    
+}
+
+/*creates the effect of flashing text*/
+@keyframes flashing {
+    0% {
+        color: red;
+    }
+    25% {
+        color: transparent;
+    }
+    50% {
+        color: #66A5AD;
+    }
+    75% {
+        color: transparent;
+    }
+    100% {
+        color: red;
+    }
+    
+}
+
+/*grid rows and columns*/
+.timeDurationD {
+    grid-area: 5/2/6/3;
+}
+.timeDurationH {
+    grid-area: 5/3/6/4;
+}
+.timeDurationM {
+    grid-area: 5/4/6/5;
+}
+.timeDurationS {
+    grid-area: 5/5/6/6;
+    
+}
+.timeMeasureD {
+    grid-area: 5/2/6/3;
+    align-self: flex-end;
+    
+}
+.timeMeasureH {
+    grid-area: 5/3/6/4;
+     align-self: flex-end;
+}
+.timeMeasureM {
+    grid-area: 5/4/6/5;
+     align-self: flex-end;
+}
+.timeMeasureS {
+    grid-area: 5/5/6/6;
+     align-self: flex-end;
+}
+
+.time {
+    font-size: 9em;
+    font-family: 'Timmana', serif;
+    color: #ffa502;
+    text-shadow: 0 0 15px #d35400;
+}
+
+.units {
+    color: #66A5AD;
+    text-shadow: 0 20px 0 #07575B;
+    font-size: 4.25em;
+    font-family: 'Russo One', serif;
+    font-style: italic;
+
+}
+
+.startBtn {
+    padding: 2em;
+    background-color:#07575B;;
+    text-align: center;
+}
+
+.stopBtn {
+    padding: 2.5em;
+    background-color: #003B46;
+    text-align: center;
+}
+
+button {
+    background-color: black;
+    font-family: 'Russo One', serif;
+    font-style: italic;
+    font-size: 3em;
+    padding: 0.05em 1.5em;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    border: none;
+    
+}
+
+button:hover {
+  color: #ffa502;
+  box-shadow: 0 0 15px #d35400;
+  text-shadow: 0 0 15px #d35400;
+}
+
+
+/*
+user must select date and time
+css invalid selector 
+pseudo class
+*/
+input:invalid+span:after {
+    color: red;
+    content: '✖';
+    padding-left: 5px;
+   
+}
+
+input:valid+span:after {
+    color: #7CFC00;
+    content: '✓';
+    padding-left: 5px;
+}
+
